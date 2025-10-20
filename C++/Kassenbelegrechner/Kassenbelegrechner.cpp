@@ -9,13 +9,15 @@ int main(int argc, char** argv) {
 	float mwst, mwstpreis;
 
 	
-	cout << "Geben sie Bitte den Preis des Produktes an welches sie kaufen möchten.";
+	cout << "Geben sie Bitte den Preis des Produktes an welches sie kaufen moechten: ";
 	cin >> Kaufpreis;
-	cout << "Geben sie bitte die SteuerID des Produktes an welches sie kaufen möchten" << endl;
+	cout << "Geben sie bitte die SteuerID des Produktes an welches sie kaufen moechten" << endl;
 	cout << "SteuerID 1 = Lebensmittel [7% Mwst.]" << endl;
 	cout << "SteuerID >1 = Keine Lebensmittel [19%Mwst]" << endl;
 	cout << "SteuerID: ";
 	cin >> steuerid;
+	cout << endl;
+	cout << endl;
 	
 	switch(steuerid) {
 		case 1:
@@ -28,8 +30,12 @@ int main(int argc, char** argv) {
 	
 	mwstpreis = Kaufpreis * (1 + mwst);
 	
-	cout << "Ihr betrag ist: " << mwstpreis <<  " Euro" << endl;   
-	cout << "Davon müssen sie " << (mwst * 100 ) << " Euro steuern zahlen" << endl;
+	cout << "Zu zahlender Nettobetrag: " << Kaufpreis << "$" << endl;
+	cout << "Auf die " << Kaufpreis << "$ muessen sie noch " << mwst * 100 <<"% steuern zahlen: " << Kaufpreis * mwst << "$" << endl;
+	cout << endl;
+	cout << "Der entgueltig zu zahlender Betrag betraegt: " << mwstpreis << "$";
+	cout << endl;
+
  	
 	return 0;
 }
