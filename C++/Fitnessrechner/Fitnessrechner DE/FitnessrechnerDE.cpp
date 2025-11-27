@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
 	
 	cout << "6ix/7even" << endl;
 	cout << "08.10.25" << endl;
-	cout << "Berechnung monatlicher abo kosten mit berücksichtigung auf Rabatte" <<endl;
+	cout << "Berechnung monatlicher abo kosten mit berÃ¼cksichtigung auf Rabatte" <<endl;
 	cout << endl;
 	
 	cout << "Anzahl an Personen: ";
@@ -36,8 +36,8 @@ int main(int argc, char** argv) {
 			break;					
 }
 
-	if (anzahljahre > 5) {
-		rabatt =+ 0.05;
+	if (anzahljahre > 4) {
+		rabatt += 0.05;
 	}
 	if (rabatt != 0) {
 		rabattpreis = grundpreis - (grundpreis * rabatt);
@@ -49,3 +49,4 @@ int main(int argc, char** argv) {
 	
 	return 0;
 }
+
